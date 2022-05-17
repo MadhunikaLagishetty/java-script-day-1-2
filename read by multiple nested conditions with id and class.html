@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <div>
+    <h2>JavaScript in Body</h2>
+
+    <div id="someIdInput" class="someClassInput">
+      <input type="text" id="nestedInput1" name="nestedInput1" class="someClassInput1" value=""><br>
+      <input type="text" id="nestedInput2" name="nestedInput2" class="someClassInput2" value=""><br>
+    </div>
+
+    <div id="someIdInput2" class="someClassInput2">
+        <input type="text" id="nestedInput1" name="nestedInput1" class="someClassInput1" value=""><br>
+        <input type="text" id="nestedInput2" name="nestedInput2" class="someClassInput2" value=""><br>
+    </div>
+
+    <button type="button" onclick="myFunction()">Click to Add</button>
+  </div>
+  <script>
+    function myFunction() {
+      var elementsNested2 = document.querySelectorAll("#someIdInput .someClassInput1");
+      console.log('elementsNested with class and class by matching condition by class name', elementsNested2);
+
+      elementsNested2.forEach((x, index) => {
+        console.log('elementsNested with id and class condition Log html inner value: ', x.value);
+      });
+    }
+  </script>
+</body>
+
+</html>

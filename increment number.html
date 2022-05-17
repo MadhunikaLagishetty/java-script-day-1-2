@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <div>
+    <h2>JavaScript in Body</h2>
+    <p id="demo">0</p>
+    <button type="button" onclick="myFunction()">Click to Add</button>
+  </div>
+  <script>
+    function myFunction() {
+      var i =  Number(document.getElementById("demo").innerText) + 1;
+      document.getElementById("demo").innerText  = i.toString();
+    }
+  </script>
+</body>
+
+</html>
+

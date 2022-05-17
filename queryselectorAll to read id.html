@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <div>
+    <h2>JavaScript in Body</h2>
+
+    <input type="text" id="xValue" name="xValue" class="someClass someClass1" value=""><br>
+    <input type="text" id="xValue" name="yValue" class="someClass someClass2" value=""><br>
+
+    <button type="button" onclick="myFunction()">Click to Add</button>
+  </div>
+  <script>
+    function myFunction() {
+      console.log('To read by id', document.querySelectorAll("#xValue"));
+    }
+  </script>
+</body>
+</html>

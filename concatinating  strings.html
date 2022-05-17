@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <div>
+    <h2>HTML Forms</h2>
+    <form>
+      <label for="xValue">Enter value for FirstName:</label><br>
+      <input type="text" id="xValue" name="xValue" value=""><br>
+
+      <label for="yValue">Enter value for LastName:</label><br>
+      <input type="text" id="yValue" name="yValue" value=""><br>
+      
+      <label for="zValue">Enter Date of Birth:</label><br>
+      <input type="date" id="zValue" name="zValue" value=""><br><br>
+
+      <input type="button" value="Click to Add" onclick="myFunction()">
+
+      <br>
+      <label>Your Full name: </label>
+      <label id="fullName"></label>
+      <br>
+      <label>Your Date of birth is: </label>
+      <label id="dob"></label>
+    </form>
+  </div>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("xValue").value;
+      var y = document.getElementById("yValue").value;
+      document.getElementById("fullName").innerHTML = (x + " " + y);
+      document.getElementById("dob").innerHTML = document.getElementById("zValue").value;
+    }
+  </script>
+</body>
+</html>

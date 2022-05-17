@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <div>
+    <h2>JavaScript in Body</h2>
+
+    <div id="someIdInput" class="someClassInput">
+      <input type="text" id="nestedInput1" name="nestedInput1" class="someClassInput1" value=""><br>
+      <input type="text" id="nestedInput2" name="nestedInput2" class="someClassInput2" value=""><br>
+    </div>
+
+    <div id="someIdInput1" class="someClassInput1">
+        <input type="text" id="nestedInput1" name="nestedInput1" class="someClassInput1" value=""><br>
+        <input type="text" id="nestedInput2" name="nestedInput2" class="someClassInput2" value=""><br>
+    </div>
+
+    <button type="button" onclick="myFunction()">Click to Add</button>
+  </div>
+  <script>
+    function myFunction() {
+      var elementsNested = document.querySelectorAll(".someClassInput .someClassInput1");
+      console.log('elementsNested by matching condition by class name', elementsNested);
+
+      elementsNested.forEach((x, index) => {
+        console.log('elementsNested condition Log html inner value: ', x.value);
+      });
+    }
+  </script>
+</body>
+
+</html>
+
+
+
